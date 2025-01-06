@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCard> = ({
     }
   return (
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
-                <div className="w-[20vh] aspect-square rounded-xl bg-gray-100 relative">
+                <div className="w-[23vh] sm:w-[23vh] md:w-[19vh] lg:w-[19vh] xl:w-[22vh]  aspect-square rounded-xl bg-gray-100 relative">
             <Image
                 src={data?.images?.[0]?.url || "/placeholder.png"}
                 fill
