@@ -20,7 +20,7 @@ const Summary = () => {
             removeAll();
         }
 
-        if (searchParams.get("annulé")) {
+        if (searchParams.get("canceled")) {
             toast.error("Une Erreur est survenue.")
         }
     }, [searchParams, removeAll]);
@@ -50,7 +50,7 @@ const Summary = () => {
                         Total des Commandes 
                     </div>
                     <div>
-                    <Currency value={45}/>
+                    <Currency value={totalPrice}/>
                     </div>
                 </div>
             </div>
