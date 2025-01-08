@@ -22,10 +22,9 @@ interface CategoryPageProps {
 }
 
 
-const CategoriePage: React.FC<CategoryPageProps> = async ({
-    params,
-    searchParams
-}) => {
+const CategoriePage: React.FC<CategoryPageProps> = async props => {
+    const searchParams = await props.searchParams;
+    const params = await props.params;
     const products = await getProducts({
         categoryId: params.categoryId,
         colorId: searchParams.colorId,
