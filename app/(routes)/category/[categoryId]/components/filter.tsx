@@ -8,7 +8,7 @@ import Button from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface FilterProps {
-    data: (Size | Color);
+    data: (Size | Color)[];
     name: string;
     valueKey: string;
 }
@@ -50,7 +50,7 @@ const Filter: React.FC<FilterProps> = ({
         </h3>
         <hr className="my-4"/>
         <div className="flex flex-wrap gap-2">
-            {data.map((filter) => (
+            {Array.isArray(data) && data.map((filter) => (
                 <div key={filter.id} className="flex items-center">
                    <Button
                    className={cn(
@@ -68,4 +68,4 @@ const Filter: React.FC<FilterProps> = ({
   )
 }
 
-export default Filter
+export default Filter;
