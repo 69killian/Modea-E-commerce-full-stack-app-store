@@ -37,13 +37,13 @@ const ProductCard: React.FC<ProductCard> = ({
     }
 
   return (
-    <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
-                <div className="w-[23vh] sm:w-[23vh] md:w-[19vh] lg:w-[19vh] xl:w-[22vh]  aspect-square rounded-xl bg-gray-100 relative">
+    <div onClick={handleClick} className="bg-white group cursor-pointer p-3 space-y-4">
+                <div className="w-[30vh] h-[40vh] sm:w-[30vh] md:w-[30vh] lg:w-[30vh] xl:w-[30vh] aspect-square bg-gray-100 relative">
             <Image
                 src={data?.images?.[0]?.url || "/placeholder.png"}
                 fill
                 alt="Image"
-                className="aspect-square object-cover rounded-md"
+                className="aspect-square object-cover"
             />
             <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
                 <div className="flex gap-x-6 justify-center">

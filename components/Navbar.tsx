@@ -11,9 +11,27 @@ const Navbar = async () => {
 
   return (
     <div className="border-b">
-        <div className="py-2 bg-black text-white flex items-center text-center justify-center">
-             <span className="font-bold">Dépêchez vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
-        </div>
+        <div className="overflow-hidden bg-black">
+  <div className="py-2 animate-marquee flex whitespace-nowrap text-white">
+    <div className="flex items-center mx-4">
+      <span className="font-bold">Dépêchez-vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
+    </div>
+    <div className="flex items-center mx-4">
+      <span className="font-bold">Dépêchez-vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
+    </div>
+    <div className="flex items-center mx-4">
+      <span className="font-bold">Dépêchez-vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
+    </div>
+    {/* Duplicate content for smooth infinite scroll */}
+    <div className="flex items-center mx-4">
+      <span className="font-bold">Dépêchez-vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
+    </div>
+    <div className="flex items-center mx-4">
+      <span className="font-bold">Dépêchez-vous :</span>&nbsp; Jusqu&apos;à demain, profitez de -50 sur notre sélection d&apos;articles
+    </div>
+  </div>
+</div>
+
       <Container>
         {/* Logo */}
         <div className="flex items-center justify-center pt-4 sm:pt-6 lg:pt-8 h-8">
