@@ -35,7 +35,7 @@ const HomePage = async () => {
                     Découvrez ici
                   </Button>
               </div>
-</div>
+            </div>
 
 
         </div>
