@@ -1,27 +1,39 @@
-import Container from "@/components/ui/container"
-import Link from "next/link"
-import MainNav from "./main-nav"
-import getCategories from "@/actions/get-categories"
-import NavbarActions from "@/components/navbar-actions"
+import Container from "@/components/ui/container";
+import Link from "next/link";
+import MainNav from "./main-nav";
+import getCategories from "@/actions/get-categories";
+import NavbarActions from "@/components/navbar-actions";
 
 export const revalidator = 0;
 
 const Navbar = async () => {
+  const categories = await getCategories();
 
-    const categories = await getCategories();
   return (
     <div className="border-b">
-        <Container>
-            <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
-                <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-                    <p className="font-bold text-xl">MODEA</p>
-                </Link>
-               <MainNav data={categories}/>
-               <NavbarActions/>
-            </div>
-        </Container>
-    </div>
-  )
-}
+      <Container>
+        {/* Logo */}
+        <div className="flex items-center justify-center pt-4 sm:pt-6 lg:pt-8 h-8">
+          <Link href="/" className="">
+            <p className="font-bold text-[35px]">MODEA</p>
+          </Link>
+        </div>
 
-export default Navbar
+        {/* Navbar layout */}
+        <div className="relative px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center sm:justify-between h-auto sm:h-20">
+          {/* MainNav centered */}
+          <div className="flex justify-center sm:flex-1 sm:ml-10 md:ml-12 mt-2">
+            <MainNav data={categories} />
+          </div>
+
+          {/* NavbarActions below MainNav on small screens */}
+          <div className="mt-2 sm:mt-0 sm:ml-auto">
+            <NavbarActions />
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default Navbar;
