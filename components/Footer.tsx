@@ -6,8 +6,13 @@ import mastercard from '@/components/ui/images/mastercard.svg';
 import visa from '@/components/ui/images/visa-svgrepo-com.svg';
 import paypal from "@/components/ui/images/paypal-color-svgrepo-com.svg";
 import Link from 'next/link';
+import getCategories from "@/actions/get-categories";
+import FooterNav from "./footer-categories";
 
-const Footer = () => {
+export const revalidator = 0;
+
+const Footer = async () => {
+    const categories = await getCategories();
   return (
     <>
       <div className="border-t border-gray-200 py-6">
@@ -59,31 +64,23 @@ const Footer = () => {
             {/* Categories Section */}
             <div className="w-full md:w-1/3 mb-6 md:mb-5">
               <h3 className="text-lg font-bold mb-4 text-gray-500">Catégories</h3>
-              <ul className="space-y-2 text-gray-500 text-sm">
-                <li><Link href="/category/1" className="hover:underline">Homme</Link></li>
-                <li><Link href="/category/2" className="hover:underline">Femme</Link></li>
-                <li><Link href="/category/4" className="hover:underline">Accessoires</Link></li>
-                <li><Link href="/category/2" className="hover:underline">Chaussures</Link></li>
-                <li><Link href="/category/4" className="hover:underline">T-shirts</Link></li>
-              </ul>
+                <FooterNav data={categories}/>
             </div>
 
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-lg font-bold mb-4 text-gray-500">FAQ</h3>
               <ul className="space-y-2 text-gray-500 text-sm">
-                <li><Link href="/category/1" className="hover:underline">Comment passer une commande ?</Link></li>
-                <li><Link href="/category/2" className="hover:underline">Quels sont les délais de livraison ?</Link></li>
-                <li><Link href="/category/4" className="hover:underline">Puis-je retourner un Produit ?</Link></li>
-                <li><Link href="/category/2" className="hover:underline">Quels sont vos partenariats ?</Link></li>
+                <li><Link href="https://modea-e-commerce-full-stack-app-store.vercel.app/faq" className="hover:underline">Comment passer une commande ?</Link></li>
+                <li><Link href="https://modea-e-commerce-full-stack-app-store.vercel.app/faq">Quels sont les délais de livraison ?</Link></li>
+                <li><Link href="https://modea-e-commerce-full-stack-app-store.vercel.app/faq">Puis-je retourner un Produit ?</Link></li>
+                <li><Link href="https://modea-e-commerce-full-stack-app-store.vercel.app/faq">Quels sont vos partenariats ?</Link></li>
               </ul>
             </div>
 
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-lg font-bold mb-4 text-gray-500">Personnel</h3>
               <ul className="space-y-2 text-gray-500 text-sm">
-                <li><Link href="/category/1" className="hover:underline">Modea Admin</Link></li>
-                <li><Link href="/category/1" className="hover:underline">Vue d&apos;ensemble</Link></li>
-                <li><Link href="/category/1" className="hover:underline">Boutique</Link></li>
+                <li><Link href="https://modea-e-commerce-full-stack-app-dashboard.vercel.app" className="hover:underline">Modea Admin</Link></li>
               </ul>
             </div>
 

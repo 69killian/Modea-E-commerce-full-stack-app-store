@@ -6,6 +6,7 @@ import ProductList from "@/components/product-list";
 import Section from "@/components/sectionavantages";
 import Button from "@/components/ui/button";
 import Marquee from "@/components/marquee";
+import Link from "next/link";
 
 const HomePage = async () => {
     const products = await getProducts({ isFeatured: true });
@@ -30,9 +31,11 @@ const HomePage = async () => {
 
               <div className="relative">
                 <Billboard data={billboard2} />
-                <div className="absolute top-[420px] left-1/2 transform -translate-x-1/2">
+                <div className="absolute top-[300px] sm:top-[420px] md:top-[240px] lg:top-[320px] xl:top-[420px] left-1/2 transform -translate-x-1/2">
                   <Button className="py-2">
+                    <Link href="https://modea-e-commerce-full-stack-app-store.vercel.app/category/79c2b383-515c-473d-9bd9-9204ca4cfd1c">
                     Découvrez ici
+                    </Link>
                   </Button>
               </div>
             </div>
