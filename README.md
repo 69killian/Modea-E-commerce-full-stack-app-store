@@ -1,6 +1,7 @@
 # (FR) Modea Store
 
 [Image du Projet](screen.png)
+Lien de modea : https://modea-e-commerce-full-stack-app-store.vercel.app/
 
 Modea est une boutique e-commerce moderne, rapide et entièrement modulaire, réalisée avec les technologies les plus performantes pour garantir une expérience utilisateur fluide.
 
