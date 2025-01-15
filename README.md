@@ -1,4 +1,4 @@
-# (FR) Modea Store
+# (FR) Modea 
 
 [Image du Projet](screen.png)
 Lien de modea : https://modea-e-commerce-full-stack-app-store.vercel.app/
