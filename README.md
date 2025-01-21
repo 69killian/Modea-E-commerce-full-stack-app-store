@@ -1,6 +1,7 @@
 # (FR) Modea 
 
 [Image du Projet](screen.png)
+
 Lien de modea : https://modea-e-commerce-full-stack-app-store.vercel.app/
 
 Modea est une boutique e-commerce moderne, rapide et entièrement modulaire, réalisée avec les technologies les plus performantes pour garantir une expérience utilisateur fluide.
@@ -13,7 +14,7 @@ Modea est une boutique e-commerce moderne, rapide et entièrement modulaire, ré
 - **[Stripe](https://stripe.com/)** : Intégration de paiements sécurisés
 - **[Tailwind](https://tailwindcss.com/)** : pour un design évolutif
 
-## 🎯 Objectif
+## 🎯 Objectif du projet
 
 Modea vise à offrir une solution full-stack modulaire et évolutive, conçue pour être mise en place rapidement tout en restant robuste.
 
